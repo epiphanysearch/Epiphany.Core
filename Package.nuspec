@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Epiphany.Core</id>
+    <version>1.0.0</version>
+    <authors>Stefano.Chiodino</authors>
+    <owners>Stefano.Chiodino</owners>
+    <licenseUrl>https://raw.githubusercontent.com/epiphanysearch/Epiphany.Core/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/epiphanysearch/Epiphany.Core</projectUrl>
+    <iconUrl>https://github.com/epiphanysearch/Epiphany.Core</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package description</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Tag1 Tag2</tags>
+    <dependencies>
+      <dependency id="SampleDependency" version="1.0" />
+    </dependencies>
+  </metadata>
+</package>

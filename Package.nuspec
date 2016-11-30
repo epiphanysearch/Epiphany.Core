@@ -2,12 +2,12 @@
 <package >
   <metadata>
     <id>Epiphany.Core</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Stefano.Chiodino</authors>
     <owners>Stefano.Chiodino</owners>
     <licenseUrl>https://raw.githubusercontent.com/epiphanysearch/Epiphany.Core/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/epiphanysearch/Epiphany.Core</projectUrl>
-    <iconUrl>https://github.com/epiphanysearch/Epiphany.Core</iconUrl>
+    <projectUrl>https://github.com/epiphanysearch/Epiphany.Core/E</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Package description</description>
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>

@@ -1,6 +1,6 @@
 # Installation
 
-https://www.nuget.org/packages/Epiphany.Core/1.0.0
+https://www.nuget.org/packages/Epiphany.Core
 
 `Install-Package Epiphany.Core`
 

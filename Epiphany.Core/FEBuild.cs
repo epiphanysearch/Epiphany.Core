@@ -4,7 +4,7 @@ using System.Web.Configuration;
 namespace Epiphany.Core
 {
     /// <summary>
-    /// Abstraction over the <see cref="FEBuild.APPSETTING_KEY"/> Web.config AppSetting. The
+    /// Abstraction over the <see cref="FEBuild.AppSettingKey"/> Web.config AppSetting. The
     /// setting is used to define the mode that the Front End Build has been built in. It provides
     /// the value as an Enum (defaulting to  <see cref="FEBuildMode.Development"/>) rather
     /// than a string.
@@ -31,23 +31,7 @@ namespace Epiphany.Core
         /// <summary>
         /// Web.config AppSetting key.
         /// </summary>
-        private static readonly string APPSETTING_KEY = "FEBuild.Mode";
-
-        /// <summary>
-        /// Gets the <see cref="FEBuildMode"/> from the Web.config AppSettings, defaulting to
-        /// <see cref="FEBuildMode.Development"/> if not set or unexpected value is set.
-        /// </summary>
-        private static FEBuildMode _GetMode()
-        {
-            FEBuildMode mode;
-            string value = WebConfigurationManager.AppSettings[FEBuild.APPSETTING_KEY];
-
-            if (!Enum.TryParse<FEBuildMode>(value, ignoreCase: true, result: out mode)) {
-                return FEBuildMode.Development;
-            }
-
-            return mode;
-        }
+        private static readonly string AppSettingKey = "FEBuild.Mode";
 
         /// <summary>
         /// The <see cref="FEBuildMode"/> set in the Web.config AppSettings, will default to
@@ -59,7 +43,7 @@ namespace Epiphany.Core
         ///     // ...
         /// }
         /// </example>
-        public static readonly FEBuildMode Mode = FEBuild._GetMode();
+        public static readonly FEBuildMode Mode = FEBuild.GetMode();
 
         /// <summary>
         /// Convenience to check if <see cref="Mode"/> is set to <see cref="FEBuildMode.Development"/>.
@@ -68,5 +52,21 @@ namespace Epiphany.Core
         /// <link rel="stylesheet" href="/assets/css/screen@(".min".If(FEBuild.IsDev)).css">
         /// ]]></example>
         public static readonly bool IsDev = (FEBuild.Mode == FEBuildMode.Development);
+
+        /// <summary>
+        /// Gets the <see cref="FEBuildMode"/> from the Web.config AppSettings, defaulting to
+        /// <see cref="FEBuildMode.Development"/> if not set or unexpected value is set.
+        /// </summary>
+        private static FEBuildMode GetMode()
+        {
+            FEBuildMode mode;
+            string value = WebConfigurationManager.AppSettings[FEBuild.AppSettingKey];
+
+            if (!Enum.TryParse<FEBuildMode>(value, ignoreCase: true, result: out mode)) {
+                return FEBuildMode.Development;
+            }
+
+            return mode;
+        }
     }
 }

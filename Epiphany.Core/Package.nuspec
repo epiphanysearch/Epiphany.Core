@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Epiphany.Core</id>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <authors>Stefano Chiodino</authors>
     <owners>Stefano.Chiodino</owners>
     <licenseUrl>https://raw.githubusercontent.com/epiphanysearch/Epiphany.Core/master/LICENSE</licenseUrl>
